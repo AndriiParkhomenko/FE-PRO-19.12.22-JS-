@@ -44,7 +44,7 @@ var arr = [1, 3, 5];
 
 function getAverage (arr) {
 	var average = arr.reduce((total, item) => total + item, 0) / arr.length;
-	return console.log(average.toFixed(2));
+	return average.toFixed(2);
 }
 
 getAverage(arr);
@@ -53,14 +53,14 @@ getAverage(arr);
 var array = [2, 4, 1, 3, 5, 2];
 // Вариант 1
 
-var sortArr = (array) => console.log(array.sort((a, b) => b - a));
+var sortArr = (array) => array.sort((a, b) => b - a);
 
 sortArr(array);
 
 // Вариант 2
 
 function sortArr (array) { 
-	console.log(array.sort((a, b) => b - a));
+	array.sort((a, b) => b - a);
 }
 
 sortArr(array);
@@ -76,7 +76,7 @@ var operatorFunction = {
 };
 
 function sortArray (array, operator) { 
-	console.log(array.sort((a, b) => operatorFunction[operator](a, b)));
+	array.sort((a, b) => operatorFunction[operator](a, b));
 }
 
 sortArray(array, '+');
@@ -84,13 +84,13 @@ sortArray(array, '+');
 // Завдання 3:
 
 // Вариант 1
-var deleteFromStr = (str, subStr) => console.log(str.replaceAll(subStr, '')); 
+var deleteFromStr = (str, subStr) => str.replaceAll(subStr, ''); 
 
 deleteFromStr('this is sparta', 's');
 
 // Вариант 2
 function deleteFromStr (str, subStr) { 
-	return console.log(str.replaceAll(subStr, '')); 
+	return str.replaceAll(subStr, ''); 
 }
 
 deleteFromStr('this is sparta', 's');
@@ -99,21 +99,21 @@ deleteFromStr('this is sparta', 's');
 
 // Вариант 1
 function wrapStr (text, tag) {
-	return console.log('<' + tag + '>' + text.replace('!', '') + '</' + tag + '>'); 
+	return '<' + tag + '>' + text.replace('!', '') + '</' + tag + '>'; 
 }
 
 wrapStr ('Welcome here!', 'div');
 
 // Вариант 2
 
-wrapStr = (text, tag) => console.log('<' + tag + '>' + text.replace('!', '') + '</' + tag + '>'); 
+wrapStr = (text, tag) => '<' + tag + '>' + text.replace('!', '') + '</' + tag + '>'; 
 
 wrapStr ('Welcome here!', 'h1');
 // "із зірочкою":
 
 function wrapString (textName, tagName, params) {
 	var param = JSON.stringify(params).replaceAll(',', ' ');
-	return console.log('<' + tagName + param.replaceAll(':', '=') + '>' + textName.replace('!', '') + '</' + tagName + '>'); 
+	return '<' + tagName + param.replaceAll(':', '=') + '>' + textName.replace('!', '') + '</' + tagName + '>'; 
 }
 
 wrapString ('Link to google', 'a', {id: 'google-link', href: 'https://google.com.ua', class: 'link'});
