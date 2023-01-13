@@ -24,63 +24,27 @@
 const arr = [-1, 0, 1, 0, 3, 5, 8, 0, 2, 12, 2, 0, 8, -1];
 
 function processArr (arr) {
+	let obj = {zeros: 0, count: 0, pos_num: 0, neg_num: 0, evens: 0, odds: 0};
 	let bufer = 0;
-	let result = 0;
-	return {
-		zeros: function(){
-			arr.forEach(function(value) {
-				if(value === bufer) {
-					result += 1;
-				}
-			});
-			return result;
-		},
-		count: function(){
-			result = 0;
-			arr.forEach(function(value, index, array) {
-				if (array.indexOf(value) === index) {
-					result += 1
-				};
-			})
-			return result;
-		},
-		pos_num: function(){
-			result = 0;
-			arr.forEach(function(value, index, array) {
-				if (array.indexOf(value) === index && value > bufer) {
-					result += 1
-				};
-			})
-			return result;
-		},
-		neg_num: function(){
-			result = 0;
-			arr.forEach(function(value, index, array) {
-				if (array.indexOf(value) === index && value < bufer) {
-					result += 1
-				};
-			})
-			return result;
-		},
-		evens: function(){
-			result = 0;
-			arr.forEach(function(value, index, array) {
-				if (array.indexOf(value) === index && value % 2 === 0 && value !== bufer) {
-					result += 1
-				};
-			})
-			return result;
-		},
-		odds:function(){
-			result = 0;
-			arr.forEach(function(value, index, array) {
-				if (array.indexOf(value) === index && value % 2 === 1 && value !== bufer) {
-					result += 1
-				};
-			})
-			return result;
+	arr.forEach(function(value, index, array) {
+		if(value === bufer) {
+			obj.zeros += 1;
 		}
-	}
+		if (array.indexOf(value) === index) {
+			obj.count +=1; 
+		}
+		if (array.indexOf(value) === index && value > bufer) {
+			obj.pos_num += 1
+		};
+		if (array.indexOf(value) === index && value < bufer) {
+			obj.neg_num += 1
+		};
+		if (array.indexOf(value) === index && value % 2 === 0 && value !== bufer) {
+			obj.evens += 1
+		};
+		if (array.indexOf(value) === index && value % 2 === 1 && value !== bufer) {
+			obj.odds += 1
+		};
+	});
+	return obj;
 }
-
-let obj = processArr(arr);
