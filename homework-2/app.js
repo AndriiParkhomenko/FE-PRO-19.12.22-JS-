@@ -48,3 +48,5 @@ function processArr (arr) {
 	});
 	return obj;
 }
+
+processArr(arr);
