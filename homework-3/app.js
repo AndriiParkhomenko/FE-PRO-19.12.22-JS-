@@ -21,11 +21,11 @@ fetch('https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?date=2023011
 }).then(function(data) {
 	const currencies = data.map(function(rates) {
 	return {
-		name: rates?.txt,
+		name: rates.txt,
 		rate: rates.rate,
 		exchangedate: rates.exchangedate,
 		cc: rates.cc,
-		r030: rates?.r030
+		r030: rates.r030
 	}
 	});
 	renderCurrencies(currencies);
