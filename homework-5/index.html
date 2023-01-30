@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>JS homework-5</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</head>
+<body class="m-0 bg-dark">
+	<div class="container bg-white p-4">
+		<button class="btn btn-primary my-3">Load Currecies</button>
+		<h3>Date</h3>
+		<input type="date" id="date" class="form-control my-4">
+		<h3>Currecies</h3>
+		<div class="ui-widget">
+			<label for="rates-autocomplete">Tags: </label>
+			<input id="rates-autocomplete">
+		</div>
+		<input type="text" id="search" class="form-control my-4" placeholder="Search here">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>№</th>
+					<th>Дата</th>
+					<th>Назва</th>
+					<th>Курс</th>
+					<th>Скорочення</th>
+					<th>R030</th>
+				</tr>
+			</thead>
+			<tbody id="rates-tbody">
+				<tr><td class="text-center" colspan="5">Not Found</td></tr>
+			</tbody>
+		</table>
+   </div>
+   <script src="./app.js"></script>
+</body>
+</html>
