@@ -47,4 +47,3 @@ const tesla = new Auto_Electric('Tesla', 'Model X', 2020, 'AF12124AEGJ32413', '1
 console.log(tesla.log());
 console.log(tesla.checkVin());
 console.log(tesla.showBatteryConfig());
-// //////////////////////////////////////////////////
